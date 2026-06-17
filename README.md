@@ -61,3 +61,21 @@ sudo python3 flasher_tester.py firmware.bin --skip-test
 
 // Triggers the onboard LED matrix hardware test
 {"device":"light_controller", "tickvi_test":true}
+
+// Structure of regims:
+// Also you can read examples in the flasher_teser.py
+{
+  "device": "light_controller",
+  "zones": {
+    "hands": {
+      "action": true,       // true = ON, false = OFF
+      "mode": 1,            // 1, 2, or 3 (Strictly validated)
+      "duration_sec": 5     // Timer in seconds (0 = infinite)
+    },
+    "stars": {
+      "action": true,       // true = ON, false = OFF
+      "mode": 1,            // Accepts any value
+      "duration_sec": 0     // Timer in seconds (0 = infinite)
+    }
+  }
+}
