@@ -1,6 +1,6 @@
-# auroscope
+# Auroscope
 
-## ESP8266 Light Controller Firmware
+## Light Controller Firmware
 
 Custom ESP8266 firmware for driving addressable LED matrices via a structured JSON-over-UART protocol. Designed to manage independent "Hands" and "Stars"
 
