@@ -43,9 +43,10 @@ You can use this script to verify the stock firmware, test your own custom build
 * **Responses:** Returns `OK: <payload>` on success or `ERROR: <reason>` on failure (accompanied by onboard LED visual feedback).
 
 #### System Commands
+```json
 // To download the bin file
 sudo python3 flasher_tester.py firmware.bin --skip-test
-```json
+
 // Returns the board's ID
 {"device":"light_controller", "get_tickvi_id":true}
 
