@@ -13,8 +13,6 @@ python3 -m venv .venv
 .venv/bin/python -m esptool --chip esp32 --port /dev/ttyUSB0 --baud 460800 write-flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin
 ```
 
-Адреса — для текущей сборки ESP32. Если нет подключения к загрузчику: удерживайте BOOT, кратко нажмите EN/RESET, отпустите BOOT после подключения.
-
 ## Связь и системные команды
 
 USB-UART, обычно `/dev/ttyUSB0`, **115200 бод, 8N1**. Каждый запрос — одна строка JSON с `\n` в конце. Порт использует один процесс; открытие порта может перезапустить ESP32.
@@ -110,5 +108,3 @@ python3 -m venv .venv
 # Запись и сохранение WAV + quality.json
 .venv/bin/python ecg_capture.py --port /dev/ttyUSB0 --duration 30 --wait 120 --output recordings
 ```
-
-Подробности бинарного обмена: [API](ESP32_RASPBERRY_API_RU.md).
